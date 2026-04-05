@@ -2,28 +2,29 @@
 
 ## 📌 Overview
 
-This project demonstrates a **DevSecOps pipeline** using a .NET web application with Docker, Kubernetes, Jenkins, and security tools.
+This project demonstrates a complete **DevSecOps pipeline** using a .NET web application.
+It integrates **CI/CD, containerization, orchestration, and security scanning** to simulate a real-world deployment workflow.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Docker
-* Kubernetes
-* Jenkins
-* Trivy
-* OWASP Dependency Check
-* .NET
+* 🐳 Docker – Containerization
+* ☸️ Kubernetes – Container orchestration
+* 🔧 Jenkins – CI/CD pipeline automation
+* 🔐 Trivy – Vulnerability scanning
+* 🛡️ OWASP Dependency Check – Security analysis
+* 💻 .NET – Web application
 
 ---
 
 ## ⚙️ Features
 
-* Real-time CPU & Memory Monitoring
-* Docker-based deployment
-* CI/CD pipeline integration
-* Security vulnerability scanning
-* Kubernetes support
+* 📊 Real-time CPU & Memory Monitoring
+* 🚀 Docker-based deployment
+* 🔄 CI/CD pipeline integration using Jenkins
+* 🔐 Security vulnerability scanning (DevSecOps)
+* ☸️ Kubernetes deployment support
 
 ---
 
@@ -41,7 +42,7 @@ docker run -d -p 5000:5000 ghcr.io/benc-uk/dotnet-demoapp:latest
 http://localhost:5000
 ```
 
-### Monitoring Page
+### Monitoring Dashboard
 
 ```
 http://localhost:5000/Monitoring
@@ -51,19 +52,51 @@ http://localhost:5000/Monitoring
 
 ## 🔐 Security Scan
 
+Run vulnerability scanning using Trivy:
+
 ```
 trivy image ghcr.io/benc-uk/dotnet-demoapp:latest
 ```
 
 ---
 
+## ☸️ Kubernetes Deployment
+
+Kubernetes configuration files are available in the `K8S` folder.
+
+```
+kubectl apply -f deployment.yaml
+```
+
+---
+
+## 🔄 CI/CD Pipeline
+
+The Jenkins pipeline automates:
+
+* Code checkout from GitHub
+* Build and testing
+* Security scanning (Trivy, OWASP, SonarQube)
+* Docker image build and push
+* Deployment
+
+---
+
+## 📸 Output
+
+* Running .NET web application
+* Real-time monitoring dashboard
+* Security vulnerability scan reports
+
+---
+
 ## 👨‍💻 Author
 
-Rijit Ghosh
-https://github.com/RijitGhosh
+**Rijit Ghosh**
+GitHub: https://github.com/RijitGhosh
 
 ---
 
 ## ⭐ Conclusion
 
-This project shows a complete DevSecOps workflow including CI/CD, containerization, orchestration, and security integration.
+This project demonstrates a real-world **DevSecOps lifecycle**, combining development, security, and operations into a single automated workflow.
